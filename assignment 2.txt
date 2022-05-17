@@ -1,0 +1,44 @@
+-- 
+-- Roll No: <40>
+-- Name: <rabeehu rahman>
+-- Program: <student table>
+-- 
+
+
+--
+-- Dumping data for table <faculty>
+--
+insert into faculty values(100,'ashiq','2022-02-10','MCA');
+insert into faculty values(101,'akhil','2022-02-19','MBA');
+insert into faculty values(102,'nihad','2022-02-11','MCA');
+insert into faculty values(103,'nihal','2022-03-15','MTECH');
+insert into faculty values(104,'shanib','2022-03-20','MTECH');
+
+--
+-- Table structure for table <subject>
+--
+alter table subject add(duration numeric);
+--
+-- Table structure for table <faculty>
+--
+alter table faculty modify specialization varchar(20);
+--
+--Table structure for table <subject>
+--
+alter table subject drop column sdate;
+alter table subject drop column edate;
+--
+--Table structure for table <teaches>
+--
+create table teaches(fno char(5) not null,sname varchar(15) not null,sdate date not null,edate date not null,primary key(fno,sname),foreign key(fno) references faculty(fno),foreign key(fno) references subject(sname));
+--
+
+
+-- --------insert/update statement commands----------- # This line may be removed in the actcual file
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file

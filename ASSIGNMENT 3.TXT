@@ -1,0 +1,40 @@
+-- 
+-- Roll No: <40>
+-- Name: <rabeehu rahman >
+-- Program: <Assignment 3>
+-- 
+
+--
+-- Dumping data for table <Teaaches>
+--
+
+insert into teaches values(100,"dbms",'2022-03-11','2022-04-22');
+insert into teaches values(101,"business",'2022-03-16','2022-04-26');
+insert into teaches values(102,"python",'2022-03-18','2022-04-27');
+insert into teaches values(103,"java",'2022-03-22','2022-04-28');
+insert into teaches values(104,"c++",'2022-03-27','2022-04-30');--
+
+-- SQl Query Statements
+--
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+
+-- -----Question2---------------
+
+update subject set duration=5;
+
+-- -----Question3---------------
+
+select * from faculty where doj >='2020-03-10';
+
+-- -----Question4---------------
+
+select * from subject where roomno=1009 and duration >=2;
+
+-- -----Question5———————
+
+select * from subject where sdate>='2020-04-01' and edate<='2020-04-30';
+
+-- -----Question6———————
+
+select faculty.fname,subject.sname,subject.duration from faculty,subject where faculty.fno=subject.fno and subject.duration;
+
