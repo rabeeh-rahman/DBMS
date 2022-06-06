@@ -1,0 +1,53 @@
+-- 
+-- Roll No: <40>
+-- Name: <rabeehu rahman>
+-- Program: <MongoDB Queries>
+-- 
+
+
+--
+-- Retrieve all documents that contain paid orders and the orders are from before 2019
+--
+
+ db.order.find({year:{$lt:2019},paid:"Y"})
+
+--
+-- Retrieve all documents that contain unpaid orders or whose orders are from before 2019
+--
+
+ db.order.find({year:{$lt:2019},paid:"N"})
+
+--
+--Retrieve all documents that contain orders whose price is in INR
+--
+
+ db.order.find({'cost.currency':"INR"})
+
+--
+--Retrieve all documents that contain orders whose price is less than 18 INR
+--
+
+ db.order.find({'cost.price':{$lt:18},'cost.currency':"INR"})
+
+--
+--Retrieve all documents with orders that contain product "P2"
+--
+
+ db.order.find({'items.pno':"P2"})
+
+--
+--Retrieve all documents with orders that contain products whose quantity is less than 13
+--
+
+ db.order.find({'items.quantity':{$lt:13}})
+
+
+-- --------insert/update statement commands----------- # This line may be removed in the actcual file
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
+
